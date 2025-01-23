@@ -9,6 +9,10 @@ src/: Source code for the project
         ConfirmDialog.vue: Component for displaying a confirmation dialog.
     App.vue: Mian component
 
+A simple web app built with vuejs that supports note functionality. When the user enters a phone number, a request will be sent to abstract API and will return some basic data about the carrier/location and country etc.
+
+## API Keys
+Get your API Key from https://docs.abstractapi.com/phone-validation?_gl=1*1my33iv*_gcl_au*MTUyMDY5Mzc0OC4xNzM3NTk1MTY3
 
 ## Pre-requisites
 node
