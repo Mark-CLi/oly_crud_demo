@@ -16,20 +16,20 @@
 import { reactive, toRefs, watch } from 'vue';
 
 export default {
-  props: ['item'],
-  emits: ['updateItem', 'cancelEdit'],
+  props: ['item'], // get props from parent
+  emits: ['updateItem', 'cancelEdit'], // set event to emit to parent
   setup(props, { emit }) {
-    const localItem = reactive({ ...props.item });
+    const localItem = reactive({ ...props.item }); // make a copy of the item prop so we are not editing the whole thing
 
-    watch(localItem, (newVal) => {
-      emit('updateItem', { ...newVal });
-    }, { deep: true });
+    watch(localItem, (newVal) => { // watch for changes in the localItem(loclastorage?
+      emit('updateItem', { ...newVal });  // emit updateItem event
+    }, { deep: true }); //watch all changes
 
     const submitEdit = () => {
       emit('updateItem', { ...localItem });
     };
 
-    return { ...toRefs(localItem), submitEdit };
+    return { ...toRefs(localItem), submitEdit }; // return
   },
 };
 </script>
