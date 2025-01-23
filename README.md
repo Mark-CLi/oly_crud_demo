@@ -1,29 +1,36 @@
 # oly_crud_demo
 
-This template should help get you started developing with Vue 3 in Vite.
+## Pre-requisites
+node
+npm
 
-## Recommended IDE Setup
+you can verify the installation by running the following commands
+```
+node -v
+npm -v
+```
+if not installed, perform the following commands
+```
+sudo apt-get update
+sudo apt-get install nodejs
+sudo apt-get install npm
+```
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Download file from github
+```
+git clone https://github.com/Mark-CLi/oly_crud_demo.git
+```
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+## Build the project
+```
+cd oly_crud_demo
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
 npm run build
+```
+
+## Serve the project via Node.js
+```
+npm install -g serve
+serve -s dist
+serve -s dist -l 0.0.0.0:5000
 ```
