@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 class="title">Olympus Dev Application CRUD Demo</h1>
-    <h2 class="text">By entering a phone, a request to AbstractAPI will be sent and the phone you submitted will be transmitted. AbstractAPI ToS may apply</h2>
+    <h2 class="text">By entering a phone numbers, a request to AbstractAPI will be sent and the phone you submitted will be transmitted. AbstractAPI ToS may apply</h2>
     <ItemForm @addItem="addItem" />
     <ItemList
         :items="items"

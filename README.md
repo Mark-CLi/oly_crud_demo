@@ -1,5 +1,15 @@
 # oly_crud_demo
 
+## File Structure
+src/: Source code for the project
+    components: Contains the components used in the project
+        ItemForm.vue: Component for adding new items.
+        ItemList.vue: Component for displaying the list of items.
+        ItemEdit.vue: Component for editing an existing item.
+        ConfirmDialog.vue: Component for displaying a confirmation dialog.
+    App.vue: Mian component
+
+
 ## Pre-requisites
 node
 npm
@@ -31,6 +41,5 @@ npm run build
 ## Serve the project via Node.js
 ```
 npm install -g serve
-serve -s dist
-serve -s dist -l 0.0.0.0:5000
+serve -s dist -l tcp://0.0.0.0:5000
 ```

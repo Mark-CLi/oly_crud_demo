@@ -47,8 +47,24 @@ export default {
       editingItem.value = { ...item };
     };
 
-    // save the edit
-    const saveEdit = () => {
+    // save the edit and update the item via api
+    const saveEdit = async () => {
+      try {
+        const response = await fetch(`https://phonevalidation.abstractapi.com/v1/?api_key=6de0f1aeb85d421eac2f9831806394c1&phone=${editingItem.value.title}`);
+        const data = await response.json();
+        if (data.valid) {
+          editingItem.value.code = data.country.code;
+          editingItem.value.name = data.country.name;
+          editingItem.value.prefix = data.country.prefix;
+          editingItem.value.location = data.location;
+          editingItem.value.carrier = data.carrier;
+        } else {
+          console.error('Invalid phone number');
+        }
+      } catch (err) {
+        console.error('API request failed', err);
+      }
+
       emit('updateItem', editingItem.value);
       const index = props.items.findIndex(item => item.id === editingItem.value.id);
       if (index !== -1) {

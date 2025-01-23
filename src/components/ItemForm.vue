@@ -38,7 +38,7 @@ export default {
 
         try {
           // fetch request to the API
-          const response = await fetch(`https://phonevalidation.abstractapi.com/v1/?api_key=123&phone=${title.value}`);
+          const response = await fetch(`https://phonevalidation.abstractapi.com/v1/?api_key=&phone=${title.value}`);
           const data = await response.json();
           if (data.valid) {
             // if data valid than it will add to item
