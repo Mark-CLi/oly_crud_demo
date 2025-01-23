@@ -50,7 +50,7 @@ export default {
     // save the edit and update the item via api
     const saveEdit = async () => {
       try {
-        const response = await fetch(`https://phonevalidation.abstractapi.com/v1/?api_key=6de0f1aeb85d421eac2f9831806394c1&phone=${editingItem.value.title}`);
+        const response = await fetch(`https://phonevalidation.abstractapi.com/v1/?api_key=&phone=${title.value}`);
         const data = await response.json();
         if (data.valid) {
           editingItem.value.code = data.country.code;
