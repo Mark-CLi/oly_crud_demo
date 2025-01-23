@@ -1,13 +1,17 @@
 # oly_crud_demo
 
 ## File Structure
-src/: Source code for the project
-    components: Contains the components used in the project
-        ItemForm.vue: Component for adding new items.
-        ItemList.vue: Component for displaying the list of items.
-        ItemEdit.vue: Component for editing an existing item.
-        ConfirmDialog.vue: Component for displaying a confirmation dialog.
-    App.vue: Mian component
+
+### `src/`
+Source code for the project.
+
+- **`components/`**: Contains the components used in the project.
+  - **`ItemForm.vue`**: Component for adding new items.
+  - **`ItemList.vue`**: Component for displaying the list of items.
+  - **`ItemEdit.vue`**: Component for editing an existing item.
+  - **`ConfirmDialog.vue`**: Component for displaying a confirmation dialog.
+  
+- **`App.vue`**: Main component.
 
 A simple web app built with vuejs that supports note functionality. When the user enters a phone number, a request will be sent to abstract API and will return some basic data about the carrier/location and country etc.
 
